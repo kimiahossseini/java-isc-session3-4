@@ -1,4 +1,4 @@
-package session3practice3;
+package session3practice3function;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,7 +53,8 @@ public class functiontutorial {
 												// list is returned
 		System.out.println(names2);
 
-		// ********sum
+		// ********sum-------------------------------
+		//***************************************************************************
 		List<Integer> values = Arrays.asList(3, 5, 8, 9, 12);
 		int sum = values.stream().reduce(0, (i1, i2) -> i1 + i2);
 		System.out.println("sum elements in list:"+ sum);
@@ -87,7 +88,8 @@ public class functiontutorial {
 				.comparing(Person::getAge).thenComparing(Person::getName);
 		persons.sort(compratorComplex);
 
-		// ****find average of age
+		// ****find average of age--**************************************
+		//***************************************************************
 		double averageAge = persons
 					.stream()
 					.mapToDouble(p -> p.getAge())
