@@ -1,4 +1,4 @@
-package session3practice1;
+package session3practice1List;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -143,6 +143,8 @@ public class mainperson1 {
 			System.out.println("sorted list persons based on age version1  "+ persons);
 		
 		///2) if we want compare based on age by using static method comparator and reference method 
+			
+			
 			persons.sort(Comparator.comparingInt(person1::getAge));
 	        System.out.println("sorted list persons based on age version2 " + persons);	
 	     
@@ -164,6 +166,7 @@ public class mainperson1 {
 		// 1)reversing by age------reverse---------------------------------------------
 			Collections.reverse(persons);
 			System.out.println("sorted list persons besed on reverse age" +persons);
+			
 		//2) reversing	------------------------------------------------------------
 			Comparator<person1> ByAgereverse=new Comparator<person1>() {
 				@Override
@@ -174,10 +177,16 @@ public class mainperson1 {
 			};
 			persons.sort(ByAgereverse);
 			System.out.println("sorted list persons based on reverse age ByAgereverse "+persons);
+			
 		//3) reversing ---------------collections.reverseorder-------------------------------------------------------------------
 			persons.sort(Collections.reverseOrder(Comparator.comparingInt(person1::getAge)));
 	        System.out.println("sorted list persons based on reverse age reference method " + persons);	
-			
+		
+	    //4)reversing---------------------
+	        persons.sort(ByAge.reversed());
+	        System.out.println("sorted list persons based on reverse age Byage.reversed "+persons);
+	        
+	        
 		///1) sorting by name  compareTo is a  method for comparing string----------------
 			Collections.sort(persons, new Comparator<person1>() {
 				@Override
